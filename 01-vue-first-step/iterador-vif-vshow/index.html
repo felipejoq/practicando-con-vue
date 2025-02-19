@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iteraciones</title>
+</head>
+<body>
+
+<div id="myApp">
+    <h1>Batman quotes ({{ totalQuotes }})</h1>
+    <form>
+        <input
+                type="text"
+                name="quote"
+                placeholder="Add quote"
+                v-model="newQuote.quote"
+        >
+        <input
+                type="text"
+                name="author"
+                placeholder="Add quote"
+                v-model="newQuote.author"
+        >
+        <button type="button" @click="addQuote">Add quote</button>
+    </form>
+    <br/>
+    <button @click="toggleShowAuthor">Show Author</button>
+    <!--    <button @click="addQuote">Add quote</button>-->
+    <hr/>
+    <ul>
+        <li v-for="({quote, author}, index) in quotes">
+            <blockquote>
+                {{ index }} - {{ quote }}
+                <footer v-if="showAuthor">
+                    Author: {{ author }}
+                </footer>
+            </blockquote>
+        </li>
+    </ul>
+</div>
+
+<!--
+v-show no es lo mismo que v-if
+porque v-show siempre renderiza el
+elemento en el DOM, pero lo oculta con CSS
+en cambio con v-if no renderiza el elemento.
+-->
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>
