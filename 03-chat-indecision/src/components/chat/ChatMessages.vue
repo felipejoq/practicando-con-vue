@@ -11,15 +11,17 @@ const props = defineProps<Props>();
 
 const chatRef = ref<HTMLDivElement | null>(null);
 
-watch(props.messages, async () => {
-  await nextTick();
-  if (!chatRef.value) return;
-
-  chatRef.value.scrollTo({
-    top: chatRef.value.scrollHeight,
-    behavior: 'smooth',
-  });
-});
+watch(
+  () => props.messages,
+  () => {
+    setTimeout(() => {
+      chatRef.value?.scrollTo({
+        top: chatRef.value.scrollHeight,
+        behavior: 'smooth',
+      });
+    }, 100);
+  },
+);
 </script>
 
 <template>

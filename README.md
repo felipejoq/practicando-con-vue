@@ -13,3 +13,10 @@ Se crea un chat con Vue.js, se aprende a usar `v-model`, `v-on`, `v-for`, `v-if`
 además se hace fetching de datos a una Api llamada `yesno.wtf` para obtener
 una respuesta yes, no o maybe y así cuando alguien haga preguntas ? en el chat
 se solicita una respuesta a la API.
+
+- 03.1 [Chat Indecision - Tests unitarios](03-chat-indecision)
+Se agregan test unitarios para el chat indecision, se agrega vitest, su configuración y se hacen pruebas unitarias para el componente.
+además se usan herramientas para controlar ciclos de vida de los componentes de vue con Vue Test Utils.
+
+-> Uso de mount, unmount, globals, mocks, stubs, emit, props, etc. Para pruebas unitarias.
+-> Uso de spy o funciones mock para simular comportamientos de funciones.

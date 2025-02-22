@@ -7,7 +7,7 @@ const emit = defineEmits<{
 
 const message = ref('');
 
-const sendMessage = () => {
+const onSendMessage = () => {
   if (message.value.trim() === '') {
     return;
   }
@@ -21,14 +21,14 @@ const sendMessage = () => {
 <template>
   <div class="bg-white p-4 flex items-center">
     <input
-      @keydown.enter="sendMessage"
+      @keydown.enter="onSendMessage"
       v-model="message"
       type="text"
       placeholder="Type your message..."
       class="flex-1 border rounded-full px-4 py-2 focus:outline-none"
     />
     <button
-      @click="sendMessage"
+      @click="onSendMessage"
       class="bg-blue-500 text-white rounded-full p-2 ml-2 hover:bg-blue-600 focus:outline-none"
     >
       <svg

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 interface Props {
+  id: number;
   message: string;
   itsMine: boolean;
   image?: string;
