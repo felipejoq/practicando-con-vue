@@ -16,7 +16,9 @@ const { count, square, increment, decrement } = useCounter(value);
   >
     <div class="text-center">
       <h3 class="text-2xl font-bold text-blue-500">Counter: {{ count }}</h3>
-      <h3 class="text-2xl font-bold text-green-500">Square: {{ square }}</h3>
+      <h3 data-testId="square-text" class="text-2xl font-bold text-green-500">
+        Square: {{ square }}
+      </h3>
     </div>
     <div class="flex gap-3">
       <button @click="increment">+1</button>
