@@ -1,7 +1,6 @@
 import { ref } from 'vue';
 import type { IChatMessage } from '@/interfaces/chat-message.interface.ts';
 import type { IGuestResponse } from '@/interfaces/guest-response.interface.ts';
-import { sleep } from '@/helpers/sleep.ts';
 
 export const useChat = () => {
   const messages = ref<IChatMessage[]>([]);
@@ -21,10 +20,10 @@ export const useChat = () => {
 
   const onMessage = async (text: string) => {
     if (text.length === 0) return;
+
     messages.value.push({ id: new Date().getTime(), message: text, itsMine: true });
 
     if (!text.endsWith('?')) return;
-
     // await sleep(1);
     const { answer, image } = await getGuestResponse();
 

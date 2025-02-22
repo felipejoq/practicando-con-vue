@@ -5,7 +5,7 @@ interface Props {
   image?: string;
 }
 
-const props = defineProps<Props>();
+defineProps<Props>();
 </script>
 
 <template>
