@@ -11,21 +11,29 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const pokemonImage = computed(() => {
-  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${props.pokemonId}.png`;
+  return `${import.meta.env.VITE_POKEMON_IMAGE_URL}${props.pokemonId}.png`;
 });
 </script>
 
 <template>
   <section>
-    <img v-if="!showPokemon" :src="pokemonImage" alt="Pokemon Image" class="brightness-0" />
-    <img v-else :src="pokemonImage" class="fade-in" alt="Pokemon Image" />
+    <img
+      v-if="!showPokemon"
+      :src="pokemonImage"
+      alt="Pokemon Image 1"
+      class="brightness-0 max-w-[200px] max-h-[200px] sm:max-w-[250px] sm:max-h-[250px]"
+    />
+    <img
+      v-else
+      :src="pokemonImage"
+      class="fade-in max-w-[200px] max-h-[200px] sm:max-w-[250px] sm:max-h-[250px]"
+      alt="Pokemon Image 2"
+    />
   </section>
 </template>
 
 <style scoped>
 img {
-  width: 250px;
-  height: 250px;
   user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

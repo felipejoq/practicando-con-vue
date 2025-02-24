@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+html, body {
+  /*@apply bg-gray-200;*/
+}
+
+@theme {
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
+}
+
+@font-face {
+  font-family: 'Pixeboy';
+  src: url('../fonts/pixeboy.ttf') format('truetype');
+}
