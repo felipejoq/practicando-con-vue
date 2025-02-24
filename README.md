@@ -20,3 +20,15 @@ además se usan herramientas para controlar ciclos de vida de los componentes de
 
 -> Uso de mount, unmount, globals, mocks, stubs, emit, props, etc. Para pruebas unitarias.
 -> Uso de spy o funciones mock para simular comportamientos de funciones.
+
+- 04 - [Pokemon Game](04-pokemon-game)
+Se crea un juego de pokemon, se aprende a usar `v-bind`, `v-on`, `v-for`, `v-if`. Además de reforzar conceptos tales como:
+    - Componentes
+    - Props
+    - Eventos
+    - Ciclo de vida de un componente
+    - Directivas
+    - Computed properties
+    - Fetching data
+    - Comunicación entre componentes
+    - Emisión de eventos
