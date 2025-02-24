@@ -11,7 +11,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@pokemon': fileURLToPath(new URL('./src/modules/pokemon', import.meta.url)),
     },
   },
 });
